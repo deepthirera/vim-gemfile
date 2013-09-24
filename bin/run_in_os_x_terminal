@@ -3,8 +3,7 @@
 on run argv
 	tell application "iTerm"
 		activate
-		set myterm to first session of the first terminal
-		tell myterm
+    tell current session of terminal 1
 			write text argv as string
 		end tell
 	end tell

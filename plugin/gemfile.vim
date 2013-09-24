@@ -4,9 +4,9 @@ if !exists("g:gem_open_command")
   let s:cmd = "bundle open {gem_source_filename}"
 
   if has("gui_running") && has("gui_macvim")
-    let g:rspec_command = "silent !" . s:plugin_path . "/bin/run_in_os_x_terminal '" . s:cmd . "'"
+    let g:gem_open_command = "silent !" . s:plugin_path . "/bin/run_in_os_x_terminal '" . s:cmd . "'"
   else
-    let g:rspec_command = "!echo " . s:cmd . " && " . s:cmd
+    let g:gem_open_command = "!echo " . s:cmd . " && " . s:cmd
   endif
 endif
 
